@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>About This Data</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/theme.css" rel="stylesheet">
+  </head>
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li  class="active"><a href="about">About This Data Set</a></li>
+	    <li><a href="quality">Data Quality</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	<h1>Accountability: About This Data Set</h1>
+        <p>On April 15, 1912, during her maiden voyage, the Titanic sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew [1].
+         The dataset gave 891 passengers' 11 attributes(i.e age, sex) and whether they have survived or not.</a></p>
+      </div>
+
+      <div class = "container">
+      
+      
+<!--      <div class="page-header" style="float: left; display: inline-block;  margin-top: -30px; width: 40%">-->
+         <div class="page-header">
+	<h2>Where did this data come from?</h2>
+	<p style="font-size:1.5em">The dataset is taken from Kaggle, a company that provides a number of datasets for machine learning and data analysis competitions worldwide. And
+	 this dataset is the training set provided for participants to build a model predicting the likelihood of survive for a given passenger.On the rightside,
+	 the table[2] lists important attributes and their meaning. There is no available version information about the dataset on the website</p>
+      </div> 
+      
+      
+     
+      <table style="float: left; display: inline-block; width: 55%; margin-top: 30px;"> 
+      <h2 style="font-size: 1em;  align:right;">Table 1: Table of Imporatn Variables and Meanings</h2>
+  <tr>
+    <th>Important <br /> Variable</th>
+    <th>Definition</th> 
+    <th>Key</th>
+  </tr>
+  <tr>
+    <td>survival</td>
+    <td>Survival</td>
+    <td>0=No,1=Yes</td>    
+  </tr>
+  <tr>
+    <td>pclass</td>
+    <td>Ticket class</td>
+    <td>1=Upper,2=Middle,3=Lower</td>
+  </tr>
+  <tr>
+  <td>slibsp</td>
+  <td># of sibling/spouses<br /> aboard the Titanic</td>
+  <td>brother,sister,husband,<br />wife,step relatives</td>
+  </tr>
+   <tr>
+    <td>parch</td>
+    <td># of parents/ children aboard<br /> the Titanic</td>
+    <td>mother,father,daughter,son,step<br /> relatives</td>
+  </tr>
+  </table>
+ 
+      
+      <div class="page-header" style="display: inline-block;">
+	<h2>Who has access to it?</h2>
+	<p style="font-size:1.5em">The description of dataset is open to everyone. To download the dataset(i.e csv file), users need to register for members and agree to the terms of 
+	  privacy and terms of use.However, no users can edit the dataset.</p>
+      </div>
+     </div>
+      
+     <p style="margin-left:20px">[1][2]https://www.kaggle.com/c/titanic</p>
+
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>Quality of This Data</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/theme.css" rel="stylesheet">
+  </head>
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="about">About This Data Set</a></li>
+	    <li  class="active"><a href="quality">Data Quality</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	<h1>Quality: About This Data Set</h1>
+        <p>The dataset is provided for predicting survival in the Titanic event, given 11 attributes of passengers.
+        There are two columns containing missing data, but one of the column's data can be summarized from another complete column.
+        No unusual distribution of numerical and nominal data is detected.</a></p>
+      </div>
+
+    
+      <div class="page-header">
+	<h2>Is the data complete?</h2>
+	<p style="font-size:1.5em">I imported the data into the Trifacta Wrangler and found out attributes of cabin and age contained missing values.
+	The bar charts of the number of missing values for the two attributes are below. For the missing cabin value which
+	describes in which cabin did the passenger live, I do not think it's a concern since the other 'pClass' attribute
+	summarizes the specific cabin information and it is complete; for the missing age values, there might be a problem
+	since the probability of survival can be related to the age of the passenger(i.e young children do not have much experience
+	of saving themselves and swimming).</p>
+      </div>
+            
+      <div class="container">
+      <iframe width="500" height="300" align = "left" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;q=select+col5%2C+count()+from+1P14uS8-7tVUr64CHzmgIAHOmcIupHjFQ_dhvVJoh+group+by+col5+order+by+count()+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3A%22Number+of+Counts%22%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_legacyScatterChartLabels=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%2C+%22title%22%3A%22Missing(True)+and+Non-Missing(False)+Age+Values%22%7D&amp;gco_legend=right&amp;gco_title=Bar+Chart+of+Missing+Age+Values&amp;gco_series=%7B%220%22%3A%7B%22color%22%3A%22%23ff9900%22%7D%7D&amp;width=500&amp;height=300"></iframe>
+      
+      <!-- <div> -->
+      <iframe width="500" height="300" align = "right" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;q=select+col11%2C+count()+from+1P14uS8-7tVUr64CHzmgIAHOmcIupHjFQ_dhvVJoh+group+by+col11+order+by+count()+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3A%22The+Number+of+Counts%22%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_legacyScatterChartLabels=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%2C+%22title%22%3A%22True+Or+Missing+(False)+Cabin+Values%22%7D&amp;gco_legend=right&amp;gco_title=Bar+Chart+of+Missing+Cabin+Values&amp;gco_series=%7B%220%22%3A%7B%22color%22%3A%22%23e6b8af%22%7D%7D&amp;width=500&amp;height=300"></iframe>
+      </div>
+      
+      <div class="page-header">
+	<h2>Is the data coherent?</h2>
+	<p style="font-size:1.5em">Attributes are all related to the Titanic event.The nominal attributes such as Sex have coherent data(i.e all are either male or female);Numerical attributes
+	such as Age are also coherent and from the bar chart below, we can tell the range of the age is from 1 to 80. 
+	Since Titanic is open to public, I expect the ditributions of age,sex,passenger class are normal and no outlier values. From the pie chart,
+	64% data are from male and I believe it is not due to the sample bias,probably most crews were male and they were a larger proportion 
+	in the original population pool.</p>
+      </div>
+      <div class="container">
+      <iframe width="500" height="300" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;q=select+col13%2C+MINIMUM(col4)%2C+MAXIMUM(col4)%2C+AVERAGE(col4)+from+1P14uS8-7tVUr64CHzmgIAHOmcIupHjFQ_dhvVJoh+group+by+col13+order+by+MINIMUM(col4)+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3A%22Min%2FAverage%2FMax+of+Age%22%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_legacyScatterChartLabels=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22title%22%3A%22Survive(1)+or+Not(0)%22%7D&amp;gco_legend=right&amp;gco_title=Bar+Chart+of+Survival+and+Age&amp;width=500&amp;height=300"></iframe>
+      <iframe width="500" height="300" align = "right" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;q=select+col3%2C+count()+from+1P14uS8-7tVUr64CHzmgIAHOmcIupHjFQ_dhvVJoh+group+by+col3+order+by+col3+asc+limit+10&amp;viz=GVIZ&amp;t=PIE&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_useFirstColumnAsDomain=true&amp;gco_legacyScatterChartLabels=true&amp;gco_is3D=false&amp;gco_pieHole=0&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D&amp;gco_vAxes=%5B%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_title=Pie+Chart+of+Distribution+of+Sex&amp;gco_slices=%7B%220%22%3A%7B%22color%22%3A%22%230000ff%22%7D%7D&amp;width=500&amp;height=300"></iframe>
+      </div>
+
+      <div class="page-header">
+	<h2>Is the data correct?</h2>
+	<p style="font-size:1.5em">Since Kaggle did not mention how the dataset was collected, it was hard to trace whether there is a source biase involved in the 
+	data collection. To estimate the correctness of the data, I drew the bar chart of the number of survivals and the passenger class/sex,to
+	check any correlations. From the bar chart on the left,larger proportion of first class was survived (50% higher than the lower class). And the bar chart
+	on the right showed that larger proportion of females was survived, which fit the saving rule that "women and children first". In sum, no 
+	unusual patterns of data was detected.</p>
+      </div>
+      
+      <div class="container">
+      <iframe width="500" height="300" align="left" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;q=select+col1%2C+count()%2C+SUM(col13)+from+1P14uS8-7tVUr64CHzmgIAHOmcIupHjFQ_dhvVJoh+group+by+col1+order+by+col1+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3A%22Stacked+Number+of+Survived%22%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22logScale%22%3Afalse%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22logScale%22%3Afalse%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_legacyScatterChartLabels=true&amp;gco_isStacked=true&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22title%22%3A%22Passenger+Class%22%7D&amp;gco_legend=right&amp;gco_title=Bar+Chart+of+Passenger+Class+and+Number+of+Survivals&amp;width=500&amp;height=300"></iframe>
+      <iframe width="500" height="300" align="right" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;q=select+col3%2C+count()%2C+SUM(col13)+from+1P14uS8-7tVUr64CHzmgIAHOmcIupHjFQ_dhvVJoh+group+by+col3+order+by+count()+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3A%22The+Number+of+Survival%22%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_legacyScatterChartLabels=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%2C+%22title%22%3A%22Sex+of+the+Passengers%22%7D&amp;gco_legend=right&amp;gco_title=Bar+Chart+of+The+Number+of+Survival+And+Sex&amp;width=500&amp;height=300"></iframe>      
+      </div>
+      
+      
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+  </body>
+</html>
